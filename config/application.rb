@@ -39,5 +39,10 @@ module ViewComponentsDemo
 
     # Add HOST to allowed list
     config.hosts << ENV.fetch("HOST")
+
+    # Add View Components settings
+    config.view_component.default_preview_layout = "component_preview"
+    config.view_component.preview_paths << Rails.root.join("spec", "components", "previews")
+    config.view_component.preview_route = "/previews"
   end
 end
