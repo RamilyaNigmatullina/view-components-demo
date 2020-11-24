@@ -6,4 +6,5 @@
 .row
   .columns
     .medium-8.columns
-      = render articles
+      = render(Articles::ListItem::Component.with_collection(articles))
+      = paginate articles

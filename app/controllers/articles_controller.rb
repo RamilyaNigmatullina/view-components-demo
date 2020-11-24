@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   expose_decorated :article
-  expose_decorated :articles, -> { Article.all }
+  expose_decorated :articles, :fetch_articles
 
   before_action :authorize_resource!
 
@@ -39,6 +39,10 @@ class ArticlesController < ApplicationController
 
   def authorize_resource!
     authorize article
+  end
+
+  def fetch_articles
+    Article.all.page(params[:page]).per(10)
   end
 
   def article_params
