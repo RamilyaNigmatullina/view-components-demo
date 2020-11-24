@@ -1,0 +1,7 @@
+.title-bar data-hide-for="medium" data-responsive-toggle="navigation_menu"
+  button.menu-icon data-toggle="" type="button"
+  title-bar-title Menu
+
+nav.top-bar#navigation_menu
+  = render Shared::NavigationBar::GuestUserLinks::Component.new(current_user: current_user)
+  = render Shared::NavigationBar::AuthenticatedUserLinks::Component.new(current_user: current_user)

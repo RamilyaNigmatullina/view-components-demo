@@ -1,0 +1,7 @@
+.top-bar-left
+  ul.menu
+    li = root_link
+
+ul.top-bar-right.menu.dropdown(data-dropdown-menu)
+  = active_link_to "Sign in", new_user_session_path, active: :exclusive, wrap_tag: :li
+  = active_link_to "Sign up", new_user_registration_path, active: :exclusive, wrap_tag: :li

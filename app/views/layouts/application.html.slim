@@ -15,7 +15,7 @@ html class="no-js" lang="en"
     == analytics_init if GoogleAnalytics.valid_tracker?
 
   body data-current-user="#{current_user.to_json}"
-    = render "navigation"
+    = render Shared::NavigationBar::Component.new(current_user: current_user)
     = render "messages"
 
     main.grid-container

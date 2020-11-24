@@ -47,6 +47,7 @@ gem "secure_headers"
 gem "seedbank"
 gem "shrine"
 gem "stackprof"
+gem "view_component", require: "view_component/engine"
 
 group :staging, :production do
   gem "newrelic_rpm"

@@ -450,6 +450,8 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.7.0)
     uniform_notifier (1.13.0)
+    view_component (2.22.1)
+      activesupport (>= 5.0.0, < 7.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -545,6 +547,7 @@ DEPENDENCIES
   stackprof
   terminal-notifier-guard
   uglifier (>= 2.7.2)
+  view_component
   web-console
   webmock
   webpacker
