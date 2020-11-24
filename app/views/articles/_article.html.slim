@@ -1,0 +1,11 @@
+.article
+  h3 = link_to article.title, article_path(article)
+
+  .article__body
+    = truncate(article.body, length: 750) { link_to " read more", article_path(article) }
+
+  .article__info
+    div
+      = article.user.full_name
+    div
+      = article.humanized_created_at

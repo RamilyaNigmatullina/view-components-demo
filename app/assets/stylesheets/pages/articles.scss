@@ -1,0 +1,23 @@
+.article {
+  padding: 20px 0;
+  border-bottom: 1px solid $medium-gray;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.article__body {
+  padding-bottom: 10px;
+}
+
+.article__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-style: italic;
+}

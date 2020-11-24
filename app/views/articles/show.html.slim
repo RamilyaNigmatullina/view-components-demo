@@ -1,0 +1,18 @@
+.row
+  .columns
+    .article
+      h2 = article.title
+
+      .article__body
+        = article.body
+
+      .article__info
+        div
+          = article.user.full_name
+        div
+          = article.humanized_created_at
+
+      - if policy(article).edit?
+        br
+        => link_to "Edit", edit_article_path(article), class: "hollow button"
+        = link_to "Delete", article_path(article), class: "hollow button", method: :delete, data: { confirm: "Are you sure?" }

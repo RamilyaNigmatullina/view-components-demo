@@ -57,6 +57,8 @@ RSpec/RepeatedDescription:
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
+RSpec/NestedGroups:
+  Max: 4
 # Style
 
 Style/AndOr:
@@ -117,4 +119,3 @@ Metrics/MethodLength:
 
 Metrics/BlockLength:
   Enabled: false
-
